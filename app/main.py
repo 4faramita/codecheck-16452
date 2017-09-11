@@ -7,7 +7,7 @@ def main(argv):
 
   for i, v in enumerate(argv):
     # print("argv[{0}]: {1}".format(i, v))
-    if v <= 1:
+    if int(v) <= 1:
       print(1)
     else:
       current_index = 1
