@@ -46,4 +46,4 @@ def look_and_say(last_str: str) -> str:
   return result
 
 
-main([60])
+# main([1,2,3,4,5,6,7])
