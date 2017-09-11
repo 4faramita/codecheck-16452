@@ -25,28 +25,25 @@ def main(argv):
 def look_and_say(last_str: str) -> str:
   '''return the way to say last_str'''
 
-  num_sets = []
-
   current_element = last_str[0]
   last_index = 0
   current_index = 1
+
+  result = ''
 
   while current_index < len(last_str):
     if last_str[current_index] == current_element:
       current_index += 1
     else:
-      num_set = last_str[last_index:current_index]
-      num_sets.append(num_set)
+      result += str(current_index - last_index)
+      result += current_element
       current_element = last_str[current_index]
       last_index = current_index
 
-  num_set = last_str[last_index:current_index]
-  num_sets.append(num_set)
-
-  result = ''
-
-  for num_set in num_sets:
-    result += str(len(num_set))
-    result += str(num_set[0])
+  result += str(current_index - last_index)
+  result += current_element
 
   return result
+
+
+main([60])
