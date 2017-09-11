@@ -16,7 +16,7 @@ def main(argv):
       current_str = '1'
 
       while current_index < v:
-        current_str = look_and_say(current_str)
+        current_str = look_and_say(current_str)[:500]
         current_index += 1
 
       print(current_str)
@@ -47,4 +47,4 @@ def look_and_say(last_str: str) -> str:
 
 
 if __name__ == '__main__':
-  main([1,2,3,4,5,6,7])
+  main([10000])
